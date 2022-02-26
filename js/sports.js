@@ -25,7 +25,6 @@ const loadPlayer = () => {
 const displayData = (playersName) => {
     const showResultDiv = document.getElementById('show-result-div');
     const div = document.createElement('div');
-    console.log(playersName.strPlayer);
         div.classList.add('col');
         div.innerHTML = `
         <div class="card h-100 border-0">
@@ -38,7 +37,7 @@ const displayData = (playersName) => {
             </div>
         </div>
         `;
-        showResultDiv.appendChild(div);
+    showResultDiv.appendChild(div);
 }
 
 const addPlayerMyTeam = (selectedPlayer) => {
@@ -60,15 +59,11 @@ const selectedPlayerDisplay = (myPlayer) => {
                 <h5 class="card-title">Name: ${player.strPlayer}</h5>
                 <h6 class="card-title">Country: ${player.strNationality}</h6>
                 <p class="card-text">${player.strDescriptionEN.slice(1, 200)}.....</p>
-                <button class="btn btn-success" onclick="removePlayer('${div}')">Remove this player</button>
+                <button class="btn btn-success" onclick="removePlayer()">Remove this player</button>
             </div>
         </div>
         `;
         showSelectedPlayers.appendChild(div);
         matchBtn.style.display = 'block';
     });
-}
-const removePlayer = (div) => {
-    console.log(this.div);
-    div.textContent = '';
 }
