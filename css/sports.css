@@ -1,0 +1,16 @@
+.card{
+    box-shadow: 2px 2px 30px rgba(128, 128, 128, 0.267);
+}
+#empty-value, #wrong-value{
+    display: none;
+}
+.suggestion{
+    opacity: 0.3;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px){
+    .border-end{
+        border: 0px solid white !important;
+    }
+}
