@@ -58,7 +58,7 @@ const selectedPlayerDisplay = (myPlayer) => {
             <div class="card-body">
                 <h5 class="card-title">Name: ${player.strPlayer}</h5>
                 <h6 class="card-title">Country: ${player.strNationality}</h6>
-                <p class="card-text">${player.strDescriptionEN.slice(1, 200)}.....</p>
+                <p class="card-text">${player.strDescriptionEN.slice(1, 100)}.....</p>
                 <button class="btn btn-success" onclick="removePlayer()">Remove this player</button>
             </div>
         </div>
