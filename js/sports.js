@@ -6,7 +6,7 @@ const loadPlayer = () => {
     fetch(`https://www.thesportsdb.com/api/v1/json/2/searchplayers.php?p=${inputFieldText}`)
         .then(res => res.json())
         .then(data => {
-            if(inputField.length === 0){
+            if(inputFieldText.length === 0){
                 emptyValueMsg.style.display = 'block';
                 wrongValue.style.display = 'none';
             }
@@ -28,7 +28,7 @@ const displayData = (playersName) => {
         div.classList.add('col');
         div.innerHTML = `
         <div class="card h-100 border-0">
-            <img src="${playersName.strThumb}" class="card-img-top my-style img-fluid " alt="My pic">
+            <img src="${playersName.strCutout}" class="card-img-top my-style img-fluid " alt="My pic">
             <div class="card-body">
                 <h5 class="card-title">Name: ${playersName.strPlayer}</h5>
                 <h6 class="card-title">Country: ${playersName.strNationality}</h6>
@@ -54,7 +54,7 @@ const selectedPlayerDisplay = (myPlayer) => {
         div.classList.add('col');
         div.innerHTML = `
         <div class="card h-100 border-0">
-            <img src="${player.strThumb}" class="card-img-top my-style img-fluid " alt="My pic">
+            <img src="${player.strCutout}" class="card-img-top my-style img-fluid " alt="My pic">
             <div class="card-body">
                 <h5 class="card-title">Name: ${player.strPlayer}</h5>
                 <h6 class="card-title">Country: ${player.strNationality}</h6>
